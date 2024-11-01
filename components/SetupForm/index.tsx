@@ -5,8 +5,8 @@ type TProps = {
   setWorkTimer: (e: string) => void;
   restTimer: string;
   setRestTimer: (e: string) => void;
-  rounds: string;
-  setRounds: (e: string) => void;
+  rounds: number;
+  setRounds: (e: number) => void;
   breakTimer: string;
   setBreakTimer: (e: string) => void;
   onSubmit: () => void;
@@ -58,7 +58,7 @@ export const SetupForm = ({
           min={0}
           id="roundsInput"
           value={rounds}
-          onChange={(e) => setRounds(e.target.value.slice(0, 3))}
+          onChange={(e) => setRounds(Number(e.target.value.slice(0, 3)))}
           placeholder="Number of rounds"
         />
       </div>

@@ -53,12 +53,40 @@ h1 {
 
 }
 
+.currentStageTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  padding: 32px;
+
+  width: 100%;
+
+  &.work {
+    background-color: rgba(15,134,0,1)
+  }
+
+  &.rest {
+    background-color: rgb(6, 77, 191);
+  }
+
+  &.break {
+    background-color:rgb(130, 4, 184)
+  }
+
+  @media screen and (min-width: $mobile) {
+    font-size: 2.5rem;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 3.5rem;
+  }
+}
+
 header {
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(80,80,80,1) 100%, rgba(133,133,133,1) 100%);
   box-shadow: 0 0 20px rgba(15, 144, 195, 1);
   border-bottom: 1px solid rgba(15, 144, 195, 1);
   padding: 20px 15px;
-  position: fixed;
   top: 0;
   width: 100%;
 
@@ -68,15 +96,9 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: calc(101px + 3rem);
+  padding-top: 2rem;
 
-  @media screen and (min-width: $mobile) {
-    padding-top: calc(142px + 5rem);
-  }
 
-  @media screen and (min-width: $tablet) {
-    padding-top: calc(142px + 8rem);
-  }
 }
 
 .container {
@@ -163,4 +185,11 @@ input {
 
 .button.stopButton {
   background: linear-gradient(180deg, rgba(255,251,60,1) 0%, rgba(195,0,0,1) 0%, rgba(111,0,0,1) 98%);
+}
+
+.timer {
+  font-size: clamp(10vw, 12rem, 72px);
+  font-weight: bold;
+  margin-bottom: 2rem;
+  margin-top: 0;
 }
